@@ -10,7 +10,7 @@ public class Program {
         //+"}\n"
         //);
         //
-        //  args = new String[] { "proj1-minic-tokenizer\\src\\test1.minc" };
+        args = new String[] { "C:\\Users\\there\\IdeaProjects\\proj1-minic-tokenizer-startup\\src\\test8.minc" };
 
         if(args.length <= 0)
             return;
