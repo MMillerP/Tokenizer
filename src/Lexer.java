@@ -105,8 +105,18 @@ public class Lexer
                     yyparser.yylval = new ParserVal((Object)"*");
                     return Parser.OP;
                 case '/':
-                    yyparser.yylval = new ParserVal((Object) "/");
-                    return Parser.OP;
+                    c= NextChar();
+                    if(c=='/'){
+                        while(c!=10){
+                            c = NextChar();
+                        }
+                        continue;
+                    }
+                    else{
+                        next = 1;
+                        yyparser.yylval = new ParserVal((Object) "/");
+                        return Parser.OP;
+                    }
                 case ',':
                     yyparser.yylval = new ParserVal((Object) ",");
                     return Parser.COMMA;
